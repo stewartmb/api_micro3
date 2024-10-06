@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 app.use(morgan('combined')); // Logging de las solicitudes HTTP
 
 // Configurar la URL de MongoDB y otras variables
-const mongoURL = process.env.MONGO_URL || 'mongodb://34.237.90.249:27017'; // Es variable de entorno (Revisar .env)
+const mongoURL = 'mongodb://34.237.90.249:27017'; // Es variable de entorno (Revisar .env)
 
-const DATABASE_NAME = 'bd_api_node';
+const DATABASE_NAME = 'reserva_y_espacios';
 const COLLECTION_RESERVAS = 'Reserva';
 const COLLECTION_ESPACIOS = 'Espacio';
 
@@ -194,7 +194,7 @@ app.delete('/espacios', (req, res) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 8911; // REvisar archivo .env
+const PORT = process.env.PORT || 8913; // REvisar archivo .env
 app.listen(PORT, () => {
     console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
