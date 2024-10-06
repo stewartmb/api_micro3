@@ -1,5 +1,5 @@
 // Conectarse a la base de datos
-use bd_api_node;
+use reserva_y_espacios;
 db.createCollection("Espacio");
 db.createCollection("Reserva");
 
