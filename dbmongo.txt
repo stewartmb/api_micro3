@@ -1,0 +1,19 @@
+// Conectarse a la base de datos
+use bd_api_node;
+db.createCollection("Espacio");
+db.createCollection("Reserva");
+
+// Insertar documentos en la colección Reserva
+db.Reserva.insertMany([
+    { codReserva: 1, estado: "Disponible", fecha_inicio: new Date("2024-10-04T09:00:00"), fecha_fin: new Date("2024-10-04T10:00:00"), idCurso: 1, idProfesor: 1},
+    { codReserva: 2, estado: "Ocupado", fecha_inicio: new Date("2024-10-05T09:00:00"), fecha_fin: new Date("2024-10-05T10:00:00"), idCurso: 2, idProfesor: 2},
+    { codReserva: 3, estado: "Disponible", fecha_inicio: new Date("2024-10-07T09:00:00"), fecha_fin: new Date("2024-10-07T10:00:00"), idCurso: 3, idProfesor: 3}
+]);
+
+// Insertar documentos en la colección Espacio
+db.Espacio.insertMany([
+    { codEspacio: 1, tipo: "Aula", piso: 3, capacidad: 30, h_disponibles: [new Date("2024-10-04T09:00:00"), new Date("2024-10-05T11:00:00"), new Date("2024-10-06T14:00:00")]},
+    { codEspacio: 2, tipo: "Laboratorio", piso: 6, capacidad: 45, h_disponibles: [new Date("2024-10-04T09:00:00"), new Date("2024-10-05T11:00:00"), new Date("2024-10-06T14:00:00")]},
+    { codEspacio: 3, tipo: "Aula", piso: 8, capacidad: 30, h_disponibles: [new Date("2024-10-04T09:00:00"), new Date("2024-10-05T11:00:00"), new Date("2024-10-06T14:00:00")]},
+
+]);
