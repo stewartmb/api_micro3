@@ -94,7 +94,7 @@ async function handleCrudOperation(req, res, collection, operation) {
 async function verificarCurso(idCurso) {
     try {
         // URL del microservicio Python para verificar el curso
-        const pythonApiUrl = `http://127.0.0.1:8000/cursos/${idCurso}`; // Cambiar a la URL correcta de tu API de Python
+        const pythonApiUrl = `http://api-micro2:8012/cursos/${idCurso}`; // Cambiar a la URL correcta de tu API de Python
         const response = await axios.get(pythonApiUrl);
         
         if (response.data && response.data.Curso) {
