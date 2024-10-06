@@ -1,7 +1,7 @@
 FROM node:18-alpine
-WORKDIR /trabajo_parcial/API-Node
+WORKDIR /programas/API-Node
 COPY package*.json ./
 RUN npm install --production
 COPY . .
-EXPOSE 8911
+EXPOSE 8003
 CMD ["npm", "start"]
