@@ -97,7 +97,7 @@ async function verificarCurso(idCurso) {
         const pythonApiUrl = `http://api-micro2:8012/cursos/${idCurso}`; // Cambiar a la URL correcta de tu API de Python
         const response = await axios.get(pythonApiUrl);
         
-        if (response.data && response.data.Curso) {
+        if (response.data && response.data.Curso && response.data.Curso.length > 0) {
             return true; // El curso existe
         } else {
             return false; // El curso no existe
