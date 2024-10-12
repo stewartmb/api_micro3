@@ -194,7 +194,7 @@ app.delete('/espacios', (req, res) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 8913; // REvisar archivo .env
+const PORT = process.env.PORT || 8013; // REvisar archivo .env
 app.listen(PORT, () => {
     console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
